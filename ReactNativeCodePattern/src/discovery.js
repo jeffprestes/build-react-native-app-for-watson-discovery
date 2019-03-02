@@ -1,4 +1,5 @@
 import GLOBALS from '../Globals';
+/* https://stackoverflow.com/questions/42829838/react-native-atob-btoa-not-working-without-remote-js-debugging */
 import {encode as btoa} from 'base-64';
 
 export async function getDiscovery(keyword) {
