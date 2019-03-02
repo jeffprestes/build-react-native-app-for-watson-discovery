@@ -17,7 +17,7 @@ export default class ArticleList extends React.Component {
   fetchDiscovery() {
     getDiscovery(this.props.keyword || 'IBM')
       .then(articles => this.setState({ articles, refreshing: false }))
-      .catch(() => this.setState({ refreshing: false }));
+      .catch((err) => { console.log('erro: '); console.error(err); this.setState({ refreshing: false })});
   }
 
   handleRefresh() {
